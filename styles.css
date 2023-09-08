@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Kanit', sans-serif;
+    scroll-behavior: smooth;
+    /* outline: 1px solid red; */
+}
+
+/* Style the horizontal scrollbar track */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+    /* Width of the scrollbar track */
+}
+
+/* Style the horizontal scrollbar thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+    background-color:#7AB7EE;
+    /* Color of the thumb */
+    border-radius: 6px;
+    /* Rounded corners of the thumb */
+}
+
+/* Style the horizontal scrollbar track when being hovered */
+::-webkit-scrollbar-track {
+    background: linear-gradient(152.28deg, #281D64 -11.68%, #D9D9D9 -11.68%, #281D64 -2.2%, #6D2FCC 26.47%, #B768EE 61.37%, #7AB7EE 101.11%, #D9D9D9 105.59%);
+    /* background-color: red; */
+    /* Color when hovered */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+}
+
+.hamburgur_icon {
+    display: none;
+    cursor: pointer;
+}
+
+.phone_nav {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0.5em 3em;
+    border-radius: 30px;
+    background-color: #7AB7EE;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.navbar_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+    padding: 0.5em 3em;
+    border-radius: 30px;
+    background-color: #7AB7EE;
+    font-weight: bold;
+    z-index: 2;
+}
+
+.navbar_content > a, .phone_nav > a {
+    color: #6D2FCC;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.navbar_content > a:hover, .phone_nav > a:hover {
+    cursor: pointer;
+    color: rgb(237, 233, 233);
+}
+
+.nav_img {
+    margin-left: 2em;
+    scale: 0.8;
+}
+
+.main_content_container {
+    position: relative;
+}
+
+.backgroundImg {
+    z-index: -1;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.main_about_section {
+    position: relative;
+    min-height: 130vh;
+}
+
+.about_content, .twitter_section, .telegram_section {
+    padding-left: 9%;
+    padding-right: 9%;
+}
+
+.influencer_section {
+    padding-left: 5em;
+    padding-right: 5em;
+    padding-top: 4em;
+}
+
+.about_content {
+    padding-top: 8em;
+    padding-bottom: 5em;
+    color: white;
+}
+
+.about_content h1 {
+    text-align: center;
+    margin-left: auto;
+        margin-right: auto;
+}
+.main_text {
+    color: white;
+    width: 70%;
+    line-height: 45px;
+}
+
+.video_container {
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+    height: 30em;
+    width: 50em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+    margin-bottom: 4em;
+    background-color: #382813;
+}
+
+.section_header_txt {
+    margin-bottom: 0.5em;
+    color: #7AB7EE;
+    text-align: center;
+    font-size: 2.5em;
+    position: relative;
+}
+
+.section_header_txt::after {
+    content: "";
+    position: absolute;
+    height: 2.1px;
+    width: 8%;
+    background-color:#7AB7EE;
+    margin-top: 1.45em;
+    z-index: 100;
+    left: 46%;
+    /* bottom: -1px;
+    left: 45%;
+    right: 55%; */
+}
+
+.about_txt {
+    width: 60em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 25px;
+    margin-top: 3em;
+}
+
+@media screen and (max-width: 1206px) {
+    .about_txt {
+        width: 80%;
+    }
+}
+
+/* Twitter Section */
+.twitter_section {
+    background-image: url('./images/666\ 1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 40em; */
+    padding-bottom: 4em;
+        position: relative;
+}
+.telegram_section {
+    background-image: url('./images/telegramBack.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* height: 40em; */
+        padding-bottom: 4em;
+        position: relative;
+}
+
+.influencer_section {
+    background-image: url('./images/influencerBack.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 40em; */
+    padding-bottom: 4em;
+}
+
+.card_container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 3%;
+    margin-top: 3em;
+}
+
+.card_item {
+    background: linear-gradient(152.28deg, #281D64 -11.68%, #D9D9D9 -11.68%, #281D64 -2.2%, #6D2FCC 26.47%, #B768EE 61.37%, #7AB7EE 101.11%, #D9D9D9 105.59%);
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    padding: 1em 1.6em;
+}
+
+.card_header {
+    font-size: 1.4em;
+}
+
+.card_sub_header {
+    color: #281D64;
+    font-weight: 600;
+    padding-top: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.card_sub_header > a, .influencer_card_sub_header > a {
+    text-decoration: none;
+    color: unset;
+}
+
+.card_item > a, .influencer_card_item_text > a {
+    text-decoration: none;
+    color: unset;
+}
+
+.influencer_card_sub_header {
+    color: #281D64;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+}
+
+/* .influencer_card_sub_header > a {
+    text-decoration: none;
+    color: unset;
+} */
+
+.card_item> p {
+    width: 90%;
+    line-height: 23px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.card_button {
+    cursor: pointer;
+    margin-top: 2.5em;
+    display: flex;
+    align-items: center;
+    /* width: 60%; */
+    padding: 0.5em 2.5em;
+    gap: 5px;
+    border-radius: 30px;
+    border: none;
+    font-weight: 600;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card_button > a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    color: unset;
+    text-decoration: none;
+}
+
+.card_button img {
+    position: relative;
+    transition: 0.3s;
+    left: 0px;
+}
+
+.card_button:hover img {
+    left: 6px;
+}
+
+.right_btn, .right_btn_telegram {
+    display: none;
+    position: absolute;
+    color: white;
+    top: 48%;
+    /* margin-top: 10em; */
+    z-index: 4;
+    right: 0;
+    cursor: pointer;
+}
+
+.left_btn, .left_btn_telegram {
+    display: none;
+    position: absolute;
+    color: white;
+    top: 48%;
+    left: 0;
+    /* margin-top: 10em; */
+    z-index: 4;
+    cursor: pointer;
+}
+
+/* Telegram Section */
+.telegram_section {
+    padding-top: 3em;
+}
+
+
+.footer {
+    background-image: url('./images/footer.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer_content {
+    display: flex;
+    flex-direction: column;
+    width: 30em;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.footer_content > hr {
+    margin-bottom: 1em;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.3em;
+    display: flex;
+    gap: 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a > img {
+    scale: 0.7;
+    /* font-size: 0.1em; */
+}
+
+.footer_rights {
+    padding-top: 1.8em;
+}
+
+.footer_rights > p {
+    color: white;
+    font-size: 0.6em;
+}
+
+.influencer_card_item {
+    display: flex;
+    background: linear-gradient(152.28deg, #281D64 -11.68%, #D9D9D9 -11.68%, #281D64 -2.2%, #6D2FCC 26.47%, #B768EE 61.37%, #7AB7EE 101.11%, #D9D9D9 105.59%);
+    border-radius: 30px;
+    color: white;
+    text-align: left;
+    padding: 1em 1.6em;
+}
+
+.influencer_card_item button {
+    margin-right: auto;
+    margin-left: 0;
+    margin-top: 0.5em;
+}
+
+.influencer_card_container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 1.5em;
+    margin-top: 3em;
+}
+
+.influencer_card_item_text {
+    padding-left: 0.5em;
+    font-size: 0.85em;
+}
+
+.influencer_card_item_text > p {
+    line-height: 22px;
+    padding-bottom: 0.5em;
+}
+
+@media screen and (max-width: 1070px) {
+    .main_text {
+        color: white;
+        width: 90%;
+        line-height: 45px;
+        font-size: 1.8em;
+    }
+    .card_container {
+        grid-template-columns: auto auto auto;
+    }
+    .video_container {
+        border-radius: 30px;
+        height: clamp(20em, 50vw, 41em);
+        width: 90%;
+        margin-top: 5em;
+        margin-bottom: 4em;
+    }
+    .card_item {
+        border-radius: 30px;
+        padding: 1em 0.5em;
+    }
+
+    .influencer_card_container {
+        grid-template-columns: auto auto;
+    }
+
+    .about_content, .twitter_section, .telegram_section {
+        padding-left: 3em;
+        padding-right: 3em;
+    }
+    
+    .influencer_section {
+        padding-left: 3em;
+        padding-right: 3em;
+        padding-top: 4em;
+    }
+    .influencer_card_item {
+        border-radius: 30px;
+        padding: 1em 1em;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .right_btn, .right_btn_telegram { 
+        display: flex;
+    }
+    .left_btn, .left_btn_telegram {
+        display: flex;
+    }
+    .hamburgur_icon {
+        display: flex;
+        margin-right: 2em;
+        width: 2.5em;
+        z-index: 2;
+    }
+    .nav_img {
+        width: 5em;
+    }
+    .navbar {
+        justify-content: space-between;
+    }
+    .navbar_content {
+        display: none;
+        /* display: none; */
+    }
+    .phone_nav {
+        display: flex;
+        min-height: 60vh;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        padding: 0em;
+        top: 0;
+        margin-top: -40em;
+        border-radius: 0;
+        padding: 3em 0em;
+        transition: 0.4s;
+    }
+    .about_content,
+    .twitter_section,
+    .telegram_section {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+    .section_header_txt::after {
+        width: 25%;
+        margin-top: 1.5em;
+        left: 38%;
+    }
+    .influencer_section {
+        padding-left: 1em;
+        padding-right: 1em;
+        padding-top: 3em;
+    }
+    .main_text { 
+        width: 95%;
+        font-size: 1.5em;
+        line-height: 35px;
+    }
+    /* .main_about_section {
+        min-height: 130vh;
+    } */
+    .section_header_txt {
+
+    }
+    .about_txt {
+        width: 95%;
+        font-size: 0.9em;
+        margin-top: 1.5em;
+    }
+    .card_container {
+        grid-template-columns: unset;
+        margin-top: 3em;
+        display: flex;
+        gap: 1em;
+        overflow-x: scroll;
+    }
+    .card_container > .card_item {
+        flex: 0 0 15em;
+        margin-bottom: 1em;
+    }
+    .card_item > img {
+        width: 5em;
+    }
+
+    .card_header {
+        font-size: 1em;
+    }
+    .card_sub_header {
+        font-size: 0.9em;
+    }
+    .card_item > p{
+        font-size: 0.8em;
+    }
+    .influencer_card_container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer_content {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        padding-bottom: 1em;
+        padding-top: 1em;
+    }
+}
